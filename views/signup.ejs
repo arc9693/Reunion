@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include head %>
+  <body>
+    <header>
+      <% include navbar %>
+    </header>
+    <main>
+      <div class="container d-flex justify-content-center">
+        <div id="signupbox" class="jumbotron mt-4 mainbox col-8 p-5">
+          <h1 class="text-center font-weight-bold">Sign Up</h1>
+          <form class="form-horizontal" role="form" method="post">
+            <% if (message.length > 0) { %>
+            <div class="alert alert-danger alert-dismissible fade show">
+              <%= message %>
+              <button type="button" class="close btn-sm" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <% } %>
+            <div id="signupalert" style="display:none" class="alert alert-danger">
+              <p>Error:</p>
+              <span></span>
+            </div>
+            <div class="form-in m-2">
+              <input type="text" class="form-control" name="first_name" placeholder="First Name">
+            </div>
+            <div class="form-in m-2">
+                <input type="text" class="form-control" name="last_name" placeholder="Last Name">
+            </div>
+            <div class="form-in m-2">
+                <input type="text" class="form-control" name="email" placeholder="Email">
+            </div>
+            <div class="form-in m-2">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <div class="form-in">
+              <div>
+                <button id="btn-signup" type="submit" class="btn btn-sm btn-light"><i class="fas fa-user-plus"></i> Sign Up</button>    </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <% include footer %>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Tangerine');
+body{
+    text-align: center;
+    align-items: center;
+}
+body nav{
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  min-height: 35vh;
+}
+body nav #heading{
+  font-weight: 900;
+  font-size: 4rem;
+  font-family: 'Nanum Pen Script', cursive;
+  cursor: pointer;
+}
+body nav .caption{
+  font-family: 'Tangerine', cursive;
+  font-size: 1.4rem;
+}
+
+/*INDEX*/
+.links{  align-items: center;}
+.links h4{
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 20px;
+  color:white;
+  padding: 5px;
+  margin:10px;
+  cursor: pointer;
+  font-family: 'Nanum Pen Script', cursive;
+  font-weight: 900;
+  border:1px solid white;
+}
+.links h4:hover{
+  background: white;
+  color:  #0575E6;
+  border:1px solid  #0575E6;
+}
+
+/*LOGIN PAGE & SIGNUP*/
+#loginbox ,#signupbox, #change_password{
+  border-radius: 20px;
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#loginbox h1,#signupbox h1{
+  color:white;
+  font-family: 'Nanum Pen Script', cursive;
+  font-weight: 900;
+  border-bottom: 1px solid white;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0px;
+}
+#loginbox .form-in,#signupbox .form-in,#change_password .form-in{
+  border-radius: 10px;
+}
+
+#loginbox .form-in input,#signupbox .form-in input,,#change_password .form-in input{
+  min-width:25vw;
+  border-radius: 5px;
+  height: 35px;
+  margin:10px 0px;
+}
+
+/*DASHBOARD*/
+h1 i{
+  color: #0575E6;
+}
+h4 span{
+  font-family: 'Nanum Pen Script', cursive;
+  font-weight: 900;
+  font-size: 2rem;
+}

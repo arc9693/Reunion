@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% include head %>
+<body>
+
+<header>
+    <% include navbar %>
+</header>
+
+<main>
+    <div class="alert alert-danger p-0">
+      <%= message %>
+    </div>
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center"><i class="fas fa-user fa-2x"></i></h1>
+        <h4 class="text-center">Welcome,<span class="font-weight-bold font-italic"><%= user.first_name %> <%= user.last_name %></span></h4>
+        <h5 class="text-center text-dark"><%= user.email %></h5>
+        <h6 class="text-center">
+          <a href="/logout" class="btn btn-primary btn-sm mr-2" role="button" aria-pressed="true">Logout</a>
+          <button class="btn btn-primary btn-sm" onclick="document.getElementById('change_password').style.display='block'">Change Password</button>
+        </h6>
+          <form action="/dashboard" method="post" style="display:none" id="change_password" class="p-2 mt-4">
+            <div class="form-in m-2">
+                <span class="input-group-addon"><i class="fa-lg fas fa-key"></i></span>
+                <input id="old_password" type="password" name="old_password" placeholder="old password">
+            </div>
+            <div class="form-in m-2">
+                <span class="input-group-addon"><i class="fa-lg fas fa-key"></i></span>
+                <input id="new_password" type="password" name="new_password" placeholder="new password">
+            </div>
+            <div class="form-group m-2">
+              <div class="col-sm-12 controls">
+                <button id="btn-login" type="submit" class="btn btn-light btn-sm">Change password</button>
+              </div>
+            </div>
+          </form>
+
+    </div>
+</main>
+
+<footer>
+    <% include footer %>
+</footer>
+
+</body>
+
+</html>

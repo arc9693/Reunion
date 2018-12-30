@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include head %>
+  <body>
+    <header>
+      <% include navbar %>
+    </header>
+
+    <main>
+      <div class="container d-flex justify-content-center">
+        <div id="loginbox" class="jumbotron mt-4 mainbox col-8 pt-4 pb-4 p-0">
+          <h1 class="text-center font-weight-bold">Log In</h1>
+          <form class="form-horizontal" role="form" method="post" action="/login">
+            <% if (message.length > 0) { %>
+            <div class="alert alert-danger alert-dismissible fade show">
+              <%= message %>
+              <button type="button" class="close btn-sm" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <% } %>
+            <div id="inputalert" style="display:none" class="alert alert-danger">
+              <p>Error:</p>
+              <span></span>
+            </div>
+            <div class="form-in m-2">
+              <span class="input-group-addon"><i class="fa-lg fas fa-user"></i></span>
+              <input id="login-username" type="email" name="email" value="" placeholder="Email">
+            </div>
+            <div class="form-in m-2">
+              <span class="input-group-addon"><i class="fa-lg fas fa-key"></i></span>
+              <input id="login-password" type="password" name="password" placeholder="password">
+            </div>
+            <div class="form-in m-2">
+              <div class="col-12 controls">
+                <button id="btn-login" type="submit" class="btn btn-light">Submit</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <div>
+                <div style="border-top: 1px solid #FFF; padding-top:15px; font-size:85%">
+                  Don't have an account!
+                  <a href="/signup" style="color:white">
+                  Sign up
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <% include footer %>
+    </footer>
+  </body>
+</html>
