@@ -1,5 +1,5 @@
 # Reunion (beta stage)
-Reunion is an app based upon Node.js and EJS templating engine.
+Reunion is an app based upon Node.js and EJS templating engine.Targetted to build a social platform where people can find each other.
 
 ### Features
   - Login/Registration system.
